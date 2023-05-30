@@ -4,6 +4,6 @@ from django.urls import path
 from . import views
 
 urlpatterns = [
-    path("", views.todo_form),
-    path("<int:todo_id>", views.todo_form),
+    path("", views.todo_form, name="todo-list"),
+    path("<int:todo_id>", views.todo_form, name="todo-form"),
 ]
